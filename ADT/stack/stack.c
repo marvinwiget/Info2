@@ -28,7 +28,7 @@ bool stack_isEmpty(Stack *s) {
 bool stack_push(Stack *s, int num) {
     assert(s != NULL);
 
-    if (s->size == s->capacity) {
+    if (s->size + 1 == s->capacity) {
         s->capacity *= 2;
         int *temp = realloc(s->data, s->capacity * sizeof(int));
         if (temp == NULL) {
@@ -45,8 +45,8 @@ int stack_pop(Stack *s) {
     assert(s != NULL);
     assert(!stack_isEmpty(s));
 
-    if (s->size < s->capacity / 2 && s->capacity / 2 >= BASE_CAPACITY) {
-        s->capacity /= 2;
+    if (s->size < s->capacity / 4 && s->capacity / 4 >= BASE_CAPACITY) {
+        s->capacity /= 4;
         int *temp = realloc(s->data, s->capacity * sizeof(int));
         if (temp == NULL) {
             printf("stack realloc failed (STACK_POP)");
