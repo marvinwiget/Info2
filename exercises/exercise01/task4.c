@@ -31,8 +31,10 @@ void multiplyMatrix(int n, int result[n][n], int mat1[n][n], int mat2[n][n]) {
 
 int main(int argc, char** argv) {
     int num1, num2, num3, num4;
-    printf("input 4 integers: ");
-    scanf("%d %d %d %d", &num1, &num2, &num3, &num4);
+    sscanf(argv[1], "%d", &num1);
+    sscanf(argv[2], "%d", &num2);
+    sscanf(argv[3], "%d", &num3);
+    sscanf(argv[4], "%d", &num4);
 
     int matrix[2][2] = 
         {
