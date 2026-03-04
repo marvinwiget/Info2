@@ -1,0 +1,16 @@
+1.1
+The function WhatDoIDo determines wether a string is a palindrome or not. It does so by esentially using the 2-pointer method to describe the substring. The left pointer being the parameter "s" (start of string) and the right pointer being "e" (end of string). It checks if the first letter of the word is the same as the last letter and if so, they will recursively call the function again but with s increased by 1 and e decreased by 1.
+If the start and end of the string always match throughout the recursive stack, the function will return true, and if it doesn't at one point, it returns false.
+
+Base case/terminating conditions:
+- if s == e return true (the passed through string is 1 letter long and therefore is a palindrome)
+- if str[s] != str[e] return false (if the start of string and the end of the string dont match, it cant be a palindrome and false is returned)
+
+The recursive step:
+- if s < e+1 then return RecursiveAlgo(str, s+1, e-1) (the algo is called again recursively with a smaller substring)
+
+Progression of algorithm:
+- it keeps checking if the start and end of the substring are the same and does so until the string is either 1 character long and returns true or it doesnt match anymore and therefore returns false
+
+1.2
+O(n)

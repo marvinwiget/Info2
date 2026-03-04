@@ -1,0 +1,32 @@
+2.1
+The output of printRec(20) is:
+00101
+
+2.2
+printRec(20)
+call 1:
+- argument -> 20
+- calculation -> 20 / 2 = 10
+- print -> 0
+call 2:
+- argument -> 10
+- calculation -> 10 / 2 = 5
+- print -> 0
+call3:
+- argument -> 5
+- calculation -> 5 / 2 = 2.5
+- print -> 1
+call 4:
+- argument -> 2
+- calculation -> 2 / 2 = 1
+- print -> 0
+call 5:
+- argument -> 1
+- calculation -> 1 / 2 = 0
+- print -> 1
+call 6:
+- argument -> 0
+- termination -> n == 0 is true
+
+2.3
+swap the printf line with the recursive call line
